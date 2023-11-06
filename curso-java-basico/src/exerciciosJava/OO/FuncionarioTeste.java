@@ -57,4 +57,3 @@ public class FuncionarioTeste {
         System.out.println("O Funcionário " + funcionario2.nome + " recebeu um aumento de salário de R$ " + aumentoFuncionario2);
     }
     }
-

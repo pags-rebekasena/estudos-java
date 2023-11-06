@@ -25,5 +25,3 @@ package exerciciosJava.OO;
             this.idade = idade;
         }
     }
-
-
