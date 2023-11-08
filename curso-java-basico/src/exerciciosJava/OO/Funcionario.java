@@ -3,13 +3,58 @@ package exerciciosJava.OO;
 
 
 public class Funcionario {
-    String nome;
+    private String nome;
 
-    String sobrenome;
-    String departamento;
-    Data dataEntrada;
-    String rg;
-    double salario;
+    private String sobrenome;
+    private String departamento;
+    private Data dataEntrada;
+    private String rg;
+    private double salario;
+
+
+
+    public Funcionario() {
+
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    public String getSobrenome() {
+        return sobrenome;
+    }
+    public void setSobrenome(String sobrenome){
+        this.sobrenome = sobrenome;
+    }
+    public String getDepartamento(){
+        return departamento;
+    }
+    public void  setDepartamento(String departamento){
+        this.departamento = departamento;
+    }
+    public Data getDataEntrada(){
+        return dataEntrada;
+    }
+    public void setDataEntrada(Data dataEntrada){
+        this.dataEntrada = dataEntrada;
+    }
+    public String getRg(){
+        return rg;
+    }
+    public void setRg(String rg){
+        this.rg = rg;
+    }
+    public  double getSalario(){
+        return salario;
+    }
+    public void  setSalario(double salario){
+        this.salario = salario;
+    }
+
 
     void recebeAumento(double aumento) {
         salario += aumento;
@@ -19,12 +64,12 @@ public class Funcionario {
         return salario * 12;
     }
     void mostra() {
-        System.out.println("Nome: " + nome);
-        System.out.println(("Sobrenome: " + sobrenome));
-        System.out.println("Departamento: " + departamento);
-        System.out.println("Salário: " + salario);
-        System.out.println("Data de Entrada: " + dataEntrada.getDataFormatada());
-        System.out.println("RG: " + rg);
+        System.out.println("Nome: " + getNome());
+        System.out.println(("Sobrenome: " + getSobrenome()));
+        System.out.println("Departamento: " + getDepartamento());
+        System.out.println("Salário R$: " + getSalario());
+        System.out.println("Data de Entrada: " + getDataEntrada().getDataFormatada());
+        System.out.println("RG: " + getRg());
     }
 
 }

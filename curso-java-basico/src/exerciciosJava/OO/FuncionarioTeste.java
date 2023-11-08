@@ -1,59 +1,63 @@
 package exerciciosJava.OO;
 
 public class FuncionarioTeste {
-    public static void main(String[] args) {
-        Funcionario funcionario1 = new Funcionario();
-        funcionario1.nome = "Rebeka";
-        funcionario1.sobrenome = "Sena";
-        funcionario1.departamento = "TI";
-        funcionario1.salario = 1445.0;
-        funcionario1.dataEntrada = new Data();
-        funcionario1.dataEntrada.dia = 3;
-        funcionario1.dataEntrada.mes = 10;
-        funcionario1.dataEntrada.ano = 2022;
-        funcionario1.rg = "191219976";
+        public static void main(String[] args) {
+            Funcionario funcionario1 = new Funcionario();
+            funcionario1.setNome("Rebeka");
+            funcionario1.setSobrenome("Sena");
+            funcionario1.setDepartamento("TI");
+            funcionario1.setSalario(1445.0);
 
-        double aumentoFuncionario1 = 2000.0;
-        funcionario1.recebeAumento(aumentoFuncionario1);
+            Data data1 = new Data();
+            data1.setDia(3);
+            data1.setMes(10);
+            data1.setAno(2022);
+            funcionario1.setDataEntrada(data1);
+            funcionario1.setRg("191219976");
 
-        Funcionario funcionario2 = new Funcionario();
-        funcionario2.nome = "Lucas";
-        funcionario2.sobrenome = "Sena";
-        funcionario2.departamento = "Jurídico";
-        funcionario2.salario = 6500.0;
-        funcionario2.dataEntrada = new Data();
-        funcionario2.dataEntrada.dia = 27;
-        funcionario2.dataEntrada.mes = 6;
-        funcionario2.dataEntrada.ano = 2017;
-        funcionario2.rg = "270620176";
 
-        double aumentoFuncionario2 = 1000.0;
-        funcionario2.recebeAumento(aumentoFuncionario2);
+            Funcionario funcionario2 = new Funcionario();
+            funcionario2.setNome("Lucas");
+            funcionario2.setSobrenome("Sena");
+            funcionario2.setDepartamento("Jurídico");
+            funcionario2.setSalario(6500.0);
 
-        if (funcionario1 == funcionario2) {
-            System.out.println("funcionario1 e funcionario2 são a mesma referência.");
-        } else {
-            System.out.println("funcionario1 e funcionario2 são referências diferentes.");
+            Data data2 = new Data();
+            data2.setDia(27);
+            data2.setMes(6);
+            data2.setAno(2017);
+            funcionario2.setDataEntrada(data2);
+            funcionario2.setRg("270620176");
+
+
+            if (funcionario1 == funcionario2) {
+                System.out.println("funcionario1 e funcionario2 são a mesma referência.");
+            } else {
+                System.out.println("funcionario1 e funcionario2 são referências diferentes.");
+            }
+
+            Funcionario funcionario3 = funcionario1;
+            if (funcionario1 == funcionario3) {
+                System.out.println("funcionario1 e funcionario3 são a mesma referência.");
+            } else {
+                System.out.println("funcionario1 e funcionario3 são referências diferentes.");
+            }
+
+            System.out.println("\nDetalhes da Funcionária " + funcionario1.getNome());
+            funcionario1.mostra();
+
+            double aumentoFuncionario1 = 2000.0;
+            funcionario1.recebeAumento(aumentoFuncionario1);
+
+            System.out.println("Salário anual da Funcionária " + funcionario1.getNome() + " É R$: " + funcionario1.calculaGanhoAnual());
+            System.out.println("A Funcionária " + funcionario1.getNome() + " recebeu um aumento de salário de R$ " + aumentoFuncionario1);
+
+            System.out.println("\nDetalhes do Funcionário " + funcionario2.getNome());
+            funcionario2.mostra();
+
+            double aumentoFuncionario2 = 1000.0;
+            funcionario2.recebeAumento(aumentoFuncionario2);
+            System.out.println("Salário anual do Funcionário " + funcionario2.getNome() + " É R$: " + funcionario2.calculaGanhoAnual());
+            System.out.println("O Funcionário " + funcionario2.getNome() + " recebeu um aumento de salário de R$ " + aumentoFuncionario2);
         }
-
-        Funcionario funcionario3 = funcionario1;
-        if (funcionario1 == funcionario3) {
-            System.out.println("funcionario1 e funcionario3 são a mesma referência.");
-        } else {
-            System.out.println("funcionario1 e funcionario3 são referências diferentes.");
-        }
-
-        System.out.println("\nDetalhes da Funcionária "  + funcionario1.nome);
-        funcionario1.mostra();
-
-        System.out.println("Salário anual da Funcionária " + funcionario1.nome + " É R$: " +  funcionario1.calculaGanhoAnual());
-        System.out.println("A Funcionária " + funcionario1.nome + " recebeu um aumento de salário de R$ " + aumentoFuncionario1);
-
-
-        System.out.println("\nDetalhes do Funcionário " + funcionario2.nome);
-        funcionario2.mostra();
-
-        System.out.println("Salário anual do Funcionário " + funcionario2.nome + " É R$: " +  funcionario2.calculaGanhoAnual());
-        System.out.println("O Funcionário " + funcionario2.nome + " recebeu um aumento de salário de R$ " + aumentoFuncionario2);
-    }
     }
