@@ -5,6 +5,7 @@ public class FuncionarioTeste {
             Funcionario funcionario1 = new Funcionario();
             funcionario1.setNome("Rebeka");
             funcionario1.setSobrenome("Sena");
+            funcionario1.setCpf("123456789-10");
             funcionario1.setDepartamento("TI");
             funcionario1.setSalario(1445.0);
 
@@ -19,6 +20,7 @@ public class FuncionarioTeste {
             Funcionario funcionario2 = new Funcionario();
             funcionario2.setNome("Lucas");
             funcionario2.setSobrenome("Sena");
+            funcionario2.setCpf("109876541-23");
             funcionario2.setDepartamento("Jurídico");
             funcionario2.setSalario(6500.0);
 
@@ -29,18 +31,34 @@ public class FuncionarioTeste {
             funcionario2.setDataEntrada(data2);
             funcionario2.setRg("270620176");
 
+            Funcionario funcionario3 = new Funcionario();
+            funcionario3.setNome("Lucas2");
+            funcionario3.setSobrenome("Sena");
+            funcionario3.setCpf("109876541-23");
+            funcionario3.setDepartamento("Jurídico");
+            funcionario3.setSalario(6500.0);
 
-            if (funcionario1 == funcionario2) {
+            Data data3 = new Data();
+            data3.setDia(27);
+            data3.setMes(6);
+            data3.setAno(2017);
+            funcionario3.setDataEntrada(data2);
+            funcionario3.setRg("270620176");
+
+
+
+
+            if (funcionario1.equals(funcionario2)) {
                 System.out.println("funcionario1 e funcionario2 são a mesma referência.");
             } else {
                 System.out.println("funcionario1 e funcionario2 são referências diferentes.");
             }
 
-            Funcionario funcionario3 = funcionario1;
-            if (funcionario1 == funcionario3) {
-                System.out.println("funcionario1 e funcionario3 são a mesma referência.");
+
+            if (funcionario2.equals(funcionario3)) {
+                System.out.println("funcionario1 e funcionario2 são a mesma referência.");
             } else {
-                System.out.println("funcionario1 e funcionario3 são referências diferentes.");
+                System.out.println("funcionario1 e funcionario2 são referências diferentes.");
             }
 
             System.out.println("\nDetalhes da Funcionária " + funcionario1.getNome());
@@ -51,6 +69,7 @@ public class FuncionarioTeste {
 
             System.out.println("Salário anual da Funcionária " + funcionario1.getNome() + " É R$: " + funcionario1.calculaGanhoAnual());
             System.out.println("A Funcionária " + funcionario1.getNome() + " recebeu um aumento de salário de R$ " + aumentoFuncionario1);
+
 
             System.out.println("\nDetalhes do Funcionário " + funcionario2.getNome());
             funcionario2.mostra();
